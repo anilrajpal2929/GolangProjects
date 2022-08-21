@@ -19,7 +19,7 @@ func formHandler(response http.ResponseWriter, request *http.Request) {
 }
 
 func helloHandler(response http.ResponseWriter, request *http.Request) {
-	if request.URL.RawPath != "/hello" { // I changed to .url.RawPath - it works
+	if request.URL.RawPath != "/hello" { // I changed to .url.RawPath - it works now
 		http.Error(response, "404 not found", http.StatusNotFound)
 		return
 	}
